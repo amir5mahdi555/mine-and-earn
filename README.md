@@ -1,2 +1,3 @@
-# mine and earn game
+# Mine & Earn — نسخه پیشرفته
 
+`index.html` را در مرورگر باز کنید. پیشرفت در LocalStorage ذخیره می‌شود و داده‌های نسخه قبلی حفظ می‌شوند.

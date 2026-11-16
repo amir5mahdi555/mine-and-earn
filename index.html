@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f8ff">
+  <title>بکن و پول دربیار | Mine & Earn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">⛏</span><div><strong>بکن و پول دربیار</strong><small>MINE &amp; EARN</small></div></div>
+      <div class="wallet">
+        <div class="wallet-item"><span class="wallet-icon">⛓️</span><span><small>آهن</small><b id="ironCount">0</b></span></div>
+        <div class="wallet-item"><span class="wallet-icon">✨</span><span><small>آیرون پلاس</small><b id="plusCount">0</b></span></div>
+        <div class="wallet-item coins"><span class="wallet-icon">🪙</span><span><small>سکه</small><b id="coinCount">0</b></span></div>
+      </div>
+    </header>
+
+    <main class="game-layout">
+      <aside class="side-tools left-tools" aria-label="قابلیت‌ها">
+        <button class="tool-card" data-open="ability" aria-label="Ability">
+          <img src="assets/ability.png" alt=""><span>Ability</span>
+        </button>
+        <button class="tool-card" data-open="abilityPlus" aria-label="Ability Plus">
+          <img src="assets/ability_plus.png" alt=""><span>Ability Plus</span>
+        </button>
+      </aside>
+
+      <section class="mine-area">
+        <div class="welcome-line"><span class="status-dot"></span> آماده استخراجی؟</div>
+        <button id="mineButton" class="mine-button" aria-label="برای استخراج روی بلاک آهن کلیک کن">
+          <img src="assets/iron_block.png" alt="بلاک سنگ آهن" draggable="false">
+          <span class="mine-shine"></span>
+        </button>
+        <div class="mine-message" id="mineMessage">برای استخراج، روی بلاک کلیک کن!</div>
+        <div class="cooldown-wrap">
+          <div class="cooldown-label"><span>استخراج بعدی</span><b id="cooldownText">آماده</b></div>
+          <div class="cooldown-track"><div id="cooldownBar"></div></div>
+        </div>
+        <div class="pickaxe-panel">
+          <div class="pickaxe-head">
+            <img src="assets/pickaxe.png" alt="">
+            <div><small>Pickaxe Power</small><b id="pickaxePowerStat">10</b></div>
+          </div>
+          <div class="pickaxe-durability">
+            <div class="cooldown-label"><span>Pickaxe Durability</span><b id="durabilityText">10 / 10</b></div>
+            <div class="cooldown-track"><div id="durabilityBar"></div></div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div><small>آهن در هر کلیک</small><b id="powerStat">1</b></div>
+          <div><small>تولید خودکار</small><b id="autoStat">0 / ثانیه</b></div>
+          <div><small>کلیک‌های این دوره</small><b id="cycleStat">0 / 100</b></div>
+        </div>
+      </section>
+
+      <aside class="side-tools right-tools" aria-label="فروش و کلنگ">
+        <button class="tool-card pickaxe-button" data-open="pickaxe" aria-label="Pickaxe">
+          <img src="assets/pickaxe.png" alt=""><span>Pickaxe</span>
+        </button>
+        <button class="tool-card" data-open="sell" aria-label="Sell">
+          <img src="assets/sell.png" alt=""><span>Sell</span>
+        </button>
+        <button class="tool-card" data-open="sellPlus" aria-label="Sell Plus">
+          <img src="assets/sell_plus.png" alt=""><span>Sell Plus</span>
+        </button>
+      </aside>
+    </main>
+    <footer class="footer-note">نسخه تک‌نفره • پیشرفت بازی به‌صورت خودکار ذخیره می‌شود</footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header"><div><small class="modal-kicker">MINE &amp; EARN</small><h2 id="modalTitle">بخش بازی</h2></div><button class="close-button" id="closeModal" aria-label="بستن">×</button></header>
+      <div class="modal-content" id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+  <div id="customCursor" aria-hidden="true"><img src="assets/pickaxe.png" alt=""></div>
+  <script src="app.js"></script>
+</body>
+</html>
