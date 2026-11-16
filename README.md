@@ -1,0 +1,2 @@
+# mine and earn game
+
